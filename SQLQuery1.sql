@@ -19,4 +19,6 @@ insert into EmployeePayRoll (Name, Salary, StartDate) values
 select * from EmployeePayRoll where Name='Rajeshwari';
 select Id,Name from EmployeePayRoll where Name='Deeraj';
 select * from EmployeePayRoll;
-
+--UC5-- Retrieve salary of particular employee and particular date range
+select Salary from EmployeePayRoll where Name = 'Jk';
+select * from EmployeePayRoll where StartDate between cast ('2018-01-01' as date) and GETDATE();
