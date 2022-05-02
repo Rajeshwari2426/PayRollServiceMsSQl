@@ -9,3 +9,9 @@ CREATE TABLE EmployeePayRoll(
 	startDate date);
 -------UC3-Insert data to table-----
 INSERT INTO EmployeePayRoll (Name,Salary,startDate) Values('Rajeshwari',70000,getdate());
+insert into EmployeePayRoll (Name, Salary, StartDate) values
+('Deeraj', 70000.00, '2007-02-03'),
+('Nani', 50000.00, '2010-05-04'),
+('Jk', 60000.00, '2009-06-09'),
+('Anushka', 40000.00, '2018-03-05'),
+('Samantha', 50000.00, '2020-08-02');
