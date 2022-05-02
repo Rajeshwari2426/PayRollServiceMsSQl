@@ -22,3 +22,7 @@ select * from EmployeePayRoll;
 --UC5-- Retrieve salary of particular employee and particular date range
 select Salary from EmployeePayRoll where Name = 'Jk';
 select * from EmployeePayRoll where StartDate between cast ('2018-01-01' as date) and GETDATE();
+--UC6-- add Gender to Employee_Payroll Table and Update the Rows to reflect the correct Employee Gender
+alter table EmployeePayRoll add Gender char(1);
+update EmployeePayRoll set Gender = 'M' where Id in (2,3,4,5);
+update EmployeePayRoll set Gender = 'F' where Id in (1,6,7);
