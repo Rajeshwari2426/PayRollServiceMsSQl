@@ -15,3 +15,8 @@ insert into EmployeePayRoll (Name, Salary, StartDate) values
 ('Jk', 60000.00, '2009-06-09'),
 ('Anushka', 40000.00, '2018-03-05'),
 ('Samantha', 50000.00, '2020-08-02');
+--UC4-- Retrieve  data
+select * from EmployeePayRoll where Name='Rajeshwari';
+select Id,Name from EmployeePayRoll where Name='Deeraj';
+select * from EmployeePayRoll;
+
