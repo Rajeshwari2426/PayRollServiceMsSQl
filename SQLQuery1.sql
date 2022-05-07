@@ -55,5 +55,31 @@ update EmployeePayRoll set Net_Pay = (Basic_Pay-Deductions-Taxable_Pay-Income_Ta
 --UC10-- Two departments for same employee
 insert into EmployeePayRoll (Name, Salary, startDate, Gender, Phone, Address, Department, Basic_Pay, Deductions, Taxable_Pay, Income_Tax) values ('Dhoni', 60000.00, '2011-07-07', 'M', 950561230, 'Chennai', 'Sports', 60000.00, 1000.00, 2000.00, 1500.00);
 								 
+Select * from EmployeePayRoll ORDER BY Name,Id,Department offset 2 rows;
+Select * from EmployeePayRoll ORDER BY Name,Id,Department offset 2 rows fetch next 3 rows only;
+Select * from EmployeePayRoll ORDER BY Salary Desc,Name,Id,Department offset 0 rows fetch next 8 rows only;
+Select Top 5 Name,Id,Department,Salary from EmployeePayRoll ORDER BY Salary Desc;
+Select Top 50 percent Name,Id,Department,Salary from EmployeePayRoll ORDER BY Salary Desc;
+Select Top 2 with ties Name,Id,Department,Salary from EmployeePayRoll ORDER BY Salary Desc;
+select distinct Department from EmployeePayRoll order by Department;
+select distinct Department,Address from EmployeePayRoll order by Department,Address;
+select distinct Department,Address from EmployeePayRoll group by Department,Address order by Department,Address;
+Select Name,Id,Department,Salary from EmployeePayRoll where Salary Between 50000 and 70000 ORDER BY Salary Desc;
+Select Name,Id,Department,Salary from EmployeePayRoll where Salary not Between 50000 and 70000 ORDER BY Salary Desc;
+Select Name,Id,Department,Salary,startDate from EmployeePayRoll where startDate Between '2011-07-07' and '2020-08-02' ORDER BY startDate;
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like 'D%';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like 'D%i';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like '_a%';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like '[Drs]%';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like '[D-r]%';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name Like '[^D-r]%';
+Select Name,Id,Department,Salary from EmployeePayRoll where Name not Like '[D-r]%';
+Select Name,Id,Department,Salary,startDate from EmployeePayRoll where startDate like 07072011 escape '-';
+
+
+
+
+
+
 
 
